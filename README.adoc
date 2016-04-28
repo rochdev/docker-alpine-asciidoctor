@@ -9,4 +9,23 @@ A simpler version of the Asciidoctor Docker Container based on Alpine.
 * Asciidoctor PDF
 * Asciidoctor EPUB3
 
-Of course feel free to add more plugins for your specific project.
+== How to use it
+
+Just run:
+
+[source,bash]
+----
+docker run -it -v <your directory>:/documents/ rochdev/alpine-asciidoctor
+----
+
+It will be directly mapped with [path]_/documents_ of the container.
+
+Once started, you just have to create AsciiDoc files (in the directory mentioned above) and run Asciidoctor commands like:
+
+* To run Asciidoctor on a basic AsciiDoc file:
++
+[source,bash]
+----
+asciidoctor sample.adoc
+asciidoctor-pdf sample.adoc
+asciidoctor-epub3 sample.adoc
