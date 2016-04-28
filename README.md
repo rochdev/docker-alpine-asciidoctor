@@ -1,31 +1,29 @@
-= docker-alpine-asciidoctor
-:source-highlighter: coderay
+# docker-alpine-asciidoctor
+
+[![](https://imagelayers.io/badge/rochdev/alpine-asciidoctor:latest.svg)](https://imagelayers.io/?images=rochdev/alpine-asciidoctor:latest 'Get your own badge on imagelayers.io')
 
 A simpler version of the Asciidoctor Docker Container based on Alpine.
 
-== The environment
+## The environment
 
 * Asciidoctor
 * Asciidoctor PDF
 * Asciidoctor EPUB3
 
-== How to use it
+## How to use it
 
 Just run:
 
-[source,bash]
-----
+```sh
 docker run -it -v <your directory>:/documents/ rochdev/alpine-asciidoctor
-----
+```
 
-It will be directly mapped with [path]_/documents_ of the container.
+It will be directly mapped with _/documents_ of the container.
 
 Once started, you just have to create AsciiDoc files (in the directory mentioned above) and run Asciidoctor commands like:
 
-* To run Asciidoctor on a basic AsciiDoc file:
-+
-[source,bash]
-----
+```sh
 asciidoctor sample.adoc
 asciidoctor-pdf sample.adoc
 asciidoctor-epub3 sample.adoc
+```
