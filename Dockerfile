@@ -7,5 +7,6 @@ RUN apk add --no-cache ruby ruby-nokogiri asciidoctor && \
     rm -rf /var/cache/apk/*
 
 WORKDIR /documents
+VOLUME /documents
 
 CMD ["/bin/sh"]
