@@ -9,6 +9,7 @@ A simpler version of the Asciidoctor Docker Container based on Alpine.
 * Asciidoctor
 * Asciidoctor PDF
 * Asciidoctor EPUB3
+* Source highlighting using CodeRay
 
 ## How to use it
 
