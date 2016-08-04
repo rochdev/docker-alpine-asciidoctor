@@ -4,7 +4,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV LIBRARY_PATH=/lib:/usr/lib
 ENV BACKENDS /asciidoctor-backends
 
-RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-pip ttf-dejavu libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev && \
+RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-setuptools py-pip ttf-dejavu libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev && \
     gem install --no-ri --no-rdoc asciidoctor-diagram && \
     gem install --no-ri --no-rdoc asciidoctor-pdf --pre && \
     gem install --no-ri --no-rdoc asciidoctor-epub3 --pre && \
