@@ -1,6 +1,7 @@
-FROM alpine:3.3
+FROM alpine:3.6
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $PATH:$JAVA_HOME/bin
 
 RUN apk add --update --no-cache gcc g++ make openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor ttf-dejavu && \
     gem install --no-ri --no-rdoc asciidoctor-diagram && \

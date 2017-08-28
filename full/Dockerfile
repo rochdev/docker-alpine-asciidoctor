@@ -1,10 +1,12 @@
-FROM alpine:3.3
+FROM alpine:3.6
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $PATH:$JAVA_HOME/bin
 ENV LIBRARY_PATH=/lib:/usr/lib
 ENV BACKENDS /asciidoctor-backends
+ENV GVM_AUTO_ANSWER true
 
-RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-setuptools py-pip ttf-dejavu libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev && \
+RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-setuptools py-pip ttf-dejavu libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev zip && \
     gem install --no-ri --no-rdoc asciidoctor-diagram && \
     gem install --no-ri --no-rdoc asciidoctor-pdf --pre && \
     gem install --no-ri --no-rdoc asciidoctor-epub3 --pre && \
@@ -20,12 +22,11 @@ RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ru
     pip install  actdiag && \
     pip install  nwdiag && \
     (curl -s get.sdkman.io | bash) && \
-    /bin/bash -c "source /root/.sdkman/bin/sdkman-init.sh" && \
     /bin/bash -c "echo sdkman_auto_answer=true > ~/.sdkman/etc/config" && \
-    /bin/bash -c -l "sdk install lazybones" && \
-    /bin/bash -c -l "sdk flush archives" && \
-    /bin/bash -c -l "sdk flush temp" && \
-    apk del bash curl unzip tar gcc g++ make ruby-dev python-dev py-pip libjpeg-turbo-dev zlib-dev && \
+    /bin/bash -c -l "source ~/.sdkman/bin/sdkman-init.sh && sdk install lazybones" && \
+    /bin/bash -c -l "source ~/.sdkman/bin/sdkman-init.sh && sdk flush archives" && \
+    /bin/bash -c -l "source ~/.sdkman/bin/sdkman-init.sh && sdk flush temp" && \
+    apk del bash curl unzip tar gcc g++ make ruby-dev python-dev py-pip libjpeg-turbo-dev zlib-dev zip && \
     rm -rf /tmp/* /var/cache/apk/* ~/.cache/pip
 
 WORKDIR /documents
