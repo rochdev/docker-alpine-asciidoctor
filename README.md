@@ -41,6 +41,15 @@ This variant is a trimmed down version containing only the necessary to build ba
 * Asciidoctor
 * Source highlighting using CodeRay
 
+### `alpine-asciidoctor:plus`
+
+This is a variant of the `alpine-asciidoctor` version that includes some additional (and sometimes experimental) libraries.
+
+For the moment, it includes:
+
+* [Asciidoctor-mathematical](https://github.com/asciidoctor/asciidoctor-mathematical)
+  to render Math in pdf files.
+
 ## How to use it
 
 See the documentation at the official repo: https://github.com/asciidoctor/docker-asciidoctor
