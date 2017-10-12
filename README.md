@@ -43,9 +43,10 @@ This variant is a trimmed down version containing only the necessary to build ba
 
 ### `alpine-asciidoctor:plus`
 
-This is a variant of the `alpine-asciidoctor` version that includes some additional (and sometimes experimental) libraries.
+[![](https://images.microbadger.com/badges/image/rochdev/alpine-asciidoctor:plus.svg)](http://microbadger.com/images/rochdev/alpine-asciidoctor:plus "Get your own image badge on microbadger.com")
 
-For the moment, it includes:
+This variant includes everything from the default variant plus the following additional
+(and sometimes experimental) libraries:
 
 * [Asciidoctor-mathematical](https://github.com/asciidoctor/asciidoctor-mathematical)
   to render Math in pdf files.
