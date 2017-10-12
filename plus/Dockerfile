@@ -38,7 +38,7 @@ RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ru
     /bin/bash -c -l "source ~/.sdkman/bin/sdkman-init.sh && sdk flush archives" && \
     /bin/bash -c -l "source ~/.sdkman/bin/sdkman-init.sh && sdk flush temp" && \
     apk del bash curl unzip tar gcc g++ make ruby-dev python-dev py-pip libjpeg-turbo-dev zlib-dev zip && \
-    apk del cmake bison flex libffi-dev glib-dev pango-dev gdk-pixbuf-dev libxml2-dev && \
+    apk del cmake bison flex libffi-dev glib-dev pango-dev cairo-dev gdk-pixbuf-dev libxml2-dev && \
     apk add --update --no-cache glib cairo pango gdk-pixbuf && \
     rm -rf /tmp/* /var/cache/apk/* ~/.cache/pip
 
