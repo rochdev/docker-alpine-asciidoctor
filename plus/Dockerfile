@@ -6,7 +6,7 @@ ENV LIBRARY_PATH=/lib:/usr/lib
 ENV BACKENDS /asciidoctor-backends
 ENV GVM_AUTO_ANSWER true
 
-RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-setuptools py-pip ttf-dejavu libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev zip && \
+RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ruby-dev ruby ruby-nokogiri ruby-json asciidoctor python python-dev py-setuptools py-pip ttf-dejavu graphviz libjpeg-turbo libjpeg-turbo-dev zlib zlib-dev zip && \
     apk add --update --no-cache cmake bison flex libffi-dev glib-dev pango-dev cairo-dev gdk-pixbuf-dev libxml2-dev && \
     gem install --no-ri --no-rdoc asciidoctor-diagram && \
     gem install --no-ri --no-rdoc asciidoctor-pdf --pre && \
