@@ -12,6 +12,7 @@ RUN apk add --update --no-cache gcc g++ make bash curl unzip tar openjdk8-jre ru
     gem install --no-ri --no-rdoc asciidoctor-pdf --pre && \
     gem install --no-ri --no-rdoc asciidoctor-epub3 --pre && \
     gem install --no-ri --no-rdoc asciidoctor-confluence && \
+    gem install --no-ri --no-rdoc asciidoctor-rouge && \
     gem install --no-ri --no-rdoc asciidoctor-mathematical && \
     gem install --no-ri --no-rdoc coderay pygments.rb thread_safe epubcheck kindlegen && \
     gem install --no-ri --no-rdoc slim && \
